@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+	<title>弹出框</title>
+	<link href="css/restyle.css" rel="stylesheet"/>
+	<link href="css/popup.css" rel="stylesheet"/>
+</head>
+<body>
+	<div style="height:1500px;background-color: #ccc;padding-top:500px;">
+		<a href="javascript:showTcc();" style="display: block;">弹出</a>
+	</div>
+	<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/popup.js"></script>
+<script type="text/javascript">
+	//点击报名按钮显示内容
+	window.tccBMFooter=tccPop({
+		container:document.body,
+		titleIcon:'./image/titleIcon.png',
+		title:'标题标题',
+		titleSpacing:"0.1rem",
+		content:'<p>哈哈哈哈哈</br>呵呵呵呵额呵呵</p>无哈无哈无哈无爱好无爱好无花无哈无哈无哈无哈无爱好无爱好无花无哈无哈无哈无哈无爱好无爱好无花无哈</br>呵呵呵和hEu嘟嘟嘟嘟嘘嘘嘘嘘啊<a class="bm-phone" href="tel:4000-006-006">4000-006-006</a><p>用其他账号报名?<a id="loginFooterOut" href="javascript:void(0);">退出</a></p>',
+		contentPadding:'0 10px',
+		clickClose:false,
+		closeFn: function () {
+			console.log('close');
+		}
+	});
+	function showTcc(){
+		tccBMFooter.show(tccBMFooter.uuid);
+	}
+</script>
+</body>
+</html>
