@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div style="height:1500px;background-color: #ccc;padding-top:500px;">
-		<a href="javascript:showTcc();" style="display: block;">弹出</a>
+		<a id="openP" href="javascript:;" style="display: block;">弹出</a>
 	</div>
 	<script type="text/javascript" src="js/zepto.min.js"></script>
 <script type="text/javascript" src="js/popup.js"></script>
@@ -27,7 +27,11 @@
 			console.log('close');
 		}
 	});
+	$(function () {
+		$('#openP').on('touchstart',showTcc);
+	})
 	function showTcc(){
+		console.log('open');
 		tccBMFooter.show(tccBMFooter.uuid);
 	}
 </script>
